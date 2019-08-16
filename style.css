@@ -1,0 +1,84 @@
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* This selector says "any <img> tags which are chilren of <header> tags" */
+header img {
+  width: 100%;
+  transition: 2s; /* How long any animations will take to finish: see :hover rule below */
+}
+
+/* this rule is for images which are currently being hovered over by the mouse */
+header img:hover {
+  /* border: 10px solid red;   */
+
+  /*
+  These two properties will be applied as an animation, over 2 seconds,
+  due to the 'transition' property above .
+  */
+  transform: rotate(720deg) scale(3);
+  filter: hue-rotate(360deg);
+}
+
+/*
+  This is a class selector: this rule only applies to elements
+  which have class="gallery".
+  On the current page, that's only <img> tags, but you could
+  add that class to any other tag. To make sure you only
+  apply this rule to img tags with class="gallery", you can write:
+  img.gallery {
+*/
+.gallery {
+  border-radius: 10px;   /* Nice rounded corners */
+  margin-right: 10px;
+}
+
+h1 {
+  color: hotpink;
+}
+
+main {
+   /* set a maximum width for the main content of this page */
+   max-width: 800px;
+
+   margin: auto; /* center the content horizontally */
+}
+
+#title {
+  color: green;
+}
+
+.special {
+  color: darkgoldenrod; /* this is a silly colour name */
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/*
+  Media query, to make the page responsive:
+  The CSS rules within it are only applied for screens which have
+  a width of up to 600 pixels, maximum
+  */
+
+@media (max-width: 600px){
+
+  body {
+    background-color: hotpink;
+    font-family: Comic Sans MS;
+  }
+
+  /*
+  Add other CSS rules here for this screen size
+  (ideally, rules which change the size of different elements
+   to fit better on smaller screens, or hide the nav menu, etc)
+  */
+
+}
